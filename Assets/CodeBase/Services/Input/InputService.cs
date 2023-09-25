@@ -2,21 +2,16 @@ using UnityEngine;
 
 namespace CodeBase.Services.Input
 {
-  public class InputService : IInputService
+  public abstract class InputService : IInputService
   {
     protected const string Horizontal = "Horizontal";
     protected const string Vertical = "Vertical";
-    
-    public Vector2 Axis
-    {
-      get
-      {
-        Vector2 axis = UnityAxis();
-        return axis;
-      }
-    }
+  
+    public abstract Vector2 Axis { get; }
 
-    private static Vector2 UnityAxis() => 
-      new(UnityEngine.Input.GetAxis(Horizontal), UnityEngine.Input.GetAxis(Vertical));
+    protected static Vector2 SimpleInputAxis()
+    {
+      return new Vector2(SimpleInput.GetAxis(Horizontal), SimpleInput.GetAxis(Vertical));
+    }
   }
 }
