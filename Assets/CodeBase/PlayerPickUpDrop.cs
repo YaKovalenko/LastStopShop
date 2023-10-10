@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPickUpDrop : MonoBehaviour {
+public class PlayerPickUpDrop : MonoBehaviour 
+{
 
 
     [SerializeField] private Transform playerCameraTransform;

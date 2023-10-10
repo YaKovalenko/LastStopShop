@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CodeBase.Tables;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ namespace CodeBase
     [SerializeField] private BoxCollider placeItemsAreaBoxCollider;
     [SerializeField] private Transform itemSpawnPoint;
     [SerializeField] private Transform vfxSpawn;
+    [SerializeField] private CraftTable _craftTable;
 
     private CraftingRecipeSO craftingRecipeSo;
 
@@ -45,10 +47,29 @@ namespace CodeBase
       List<ItemSO> inputItemList = new List<ItemSO>(craftingRecipeSo.inputItemSOList);
       List<GameObject> consumeItemGameObjectsList = new List<GameObject>();
 
+      List<int> foundItemFromRecipies = new List<int>();
+
+      foreach (var recipeItem in craftingRecipeSo.inputItemSOList)
+      {
+        for (int i = 0; i < _craftTable.GetNumberOfSlots(); i++)
+        {
+          if (recipeItem == _craftTable.GetTableSlot(i).LootItem.ItemSo)
+          {
+            foundItemFromRecipies.Add(i);
+            break;
+          }
+        }
+      }
+
+      if (foundItemFromRecipies.Count == craftingRecipeSo.inputItemSOList.Count)
+      {
+        Debug.Log("Item will be crafted " + craftingRecipeSo.outputItemSO.name);
+      }
+      
       foreach (Collider collider in colliderArray)
       {
         Debug.Log(collider);
-        if (collider.TryGetComponent(out ItemSoHolder itemSoHolder))
+        if (collider.TryGetComponent(out Item itemSoHolder))
         {
           if (inputItemList.Contains(itemSoHolder.ItemSo))
           {

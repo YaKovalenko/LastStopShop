@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7fc177fbe47f89715a9ed057c6a8a, type: 3}
   m_Name: Coffin
   m_EditorClassIdentifier: 
-  sprite: {fileID: 854268278939408518, guid: d9c87df41475ca343b77b12b71160898, type: 3}
   name: Coffin
-  prefab: {fileID: 40858769728537148, guid: d9c87df41475ca343b77b12b71160898, type: 3}
+  prefab: {fileID: -6183826157966427307, guid: 2de854d3a40be104c87b0ca4617b0bfa, type: 3}
