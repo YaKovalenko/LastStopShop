@@ -2,47 +2,54 @@ using CodeBase.CameraLogic;
 using CodeBase.Infrastructure;
 using CodeBase.Services.Input;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace CodeBase.Hero
 {
   public class HeroMove : MonoBehaviour
   {
-    [SerializeField] private CharacterController _characterController;
-    [SerializeField] private float _movementSpeed;
-
-    private IInputService _inputService;
     private Camera _camera;
+    private IInputService _inputService;
 
-    private void Awake()
+    void Awake()
     {
       _inputService = Game.InputService;
     }
-    
+
+    public NavMeshAgent playerNavMeshAgent;
+
+    public bool isRunning;
+
+    private void Update()
+    {
+      if (Input.GetMouseButton(0))
+      {
+        Ray myRay = _camera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit myRaycastHit;
+
+        if (Physics.Raycast(myRay, out myRaycastHit))
+        {
+          playerNavMeshAgent.SetDestination(myRaycastHit.point);
+        }
+      }
+
+      if (playerNavMeshAgent.remainingDistance <= playerNavMeshAgent.stoppingDistance)
+      {
+        isRunning = false;
+      }
+      else
+      {
+        isRunning = true;
+      }
+    }
+
     private void Start()
     {
       _camera = Camera.main;
       CameraFollow();
     }
 
-    private void Update()
-    {
-      Vector3 movementVector = Vector3.zero;
-
-      if (_inputService.Axis.sqrMagnitude > Constants.Epsilon)
-      {
-        movementVector = _camera.transform.TransformDirection(_inputService.Axis);
-        movementVector.y = 0;
-        movementVector.Normalize();
-
-        transform.forward = movementVector;
-      }
-
-      movementVector += Physics.gravity;
-
-      _characterController.Move(movementVector * (_movementSpeed * Time.deltaTime));
-    }
-
     private void CameraFollow() =>
-        _camera.GetComponent<CameraFollow>().Follow(gameObject);
-    }
+      _camera.GetComponent<CameraFollow>().Follow(gameObject);
   }
+}
