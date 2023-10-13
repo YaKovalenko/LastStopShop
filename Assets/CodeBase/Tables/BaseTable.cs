@@ -35,5 +35,12 @@ namespace CodeBase.Tables
     {
       return _tableSlots[slotIndex];
     }
+
+    public void ClearTableSlot(int slotIndex)
+    {
+      Destroy(_tableSlots[slotIndex].LootItem.gameObject);
+      _tableSlots[slotIndex].LootItem = null;
+      _tableSlots[slotIndex].IsOccupied = false;
+    }
   }
 }

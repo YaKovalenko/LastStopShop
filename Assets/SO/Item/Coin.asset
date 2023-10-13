@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7fc177fbe47f89715a9ed057c6a8a, type: 3}
   m_Name: Coin
   m_EditorClassIdentifier: 
-  sprite: {fileID: 8575973346061264505, guid: 4296b59400a9273488a86c13f4600e9a, type: 3}
   name: Coin
-  prefab: {fileID: 8955455131676277955, guid: 4296b59400a9273488a86c13f4600e9a, type: 3}
+  prefab: {fileID: 1508600788988748716, guid: 0a9ef505adfa896429692b3f6415681e, type: 3}

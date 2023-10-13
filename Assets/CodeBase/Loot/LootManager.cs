@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using CodeBase.MiniGame;
 using UnityEngine;
 
 namespace CodeBase.Loot
@@ -8,7 +9,13 @@ namespace CodeBase.Loot
   {
     [SerializeField] private List<ItemSO> _lastLoot;
     [SerializeField] private LootTableManager _lootTableManager;
-    
+    private ItemSO _newLoot;
+
+    private void Awake()
+    {
+      
+    }
+
     //For debug only
     [SerializeField] private ItemSO _debugItem;
 

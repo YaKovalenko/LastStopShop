@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Coffin
   m_EditorClassIdentifier: 
   name: Coffin
-  prefab: {fileID: -6183826157966427307, guid: 2de854d3a40be104c87b0ca4617b0bfa, type: 3}
+  prefab: {fileID: 5820561074104978883, guid: 0401174f754f77943b461db23b251cae, type: 3}

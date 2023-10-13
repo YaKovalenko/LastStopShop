@@ -1,4 +1,8 @@
+using System;
+using System.Collections;
+using CodeBase.Loot;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace CodeBase.MiniGame
 {
@@ -8,6 +12,8 @@ namespace CodeBase.MiniGame
         public Transform[] points;
         public int i;
 
+        [SerializeField] private MiniGameLootItem _lastClickedItem;
+        [SerializeField] private LootManager _lootManager;
 
         private void FixedUpdate()
         {
@@ -27,7 +33,7 @@ namespace CodeBase.MiniGame
         {
             k = true;
             Name = other.name;
-
+            _lastClickedItem = other.GetComponent<MiniGameLootItem>();
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -42,7 +48,16 @@ namespace CodeBase.MiniGame
             {
                 speed = 0;
                 Debug.Log(Name);
+                if(_lastClickedItem != null)
+                    SendLoot();
+
             }
+        }
+
+        private void SendLoot()
+        {
+            _lootManager.AddLoot(_lastClickedItem.GetItemData());
+            EventManager.OnMiniGameEnded();
         }
     }
 }

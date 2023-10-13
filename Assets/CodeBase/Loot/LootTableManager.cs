@@ -43,7 +43,7 @@ namespace CodeBase.Loot
 
     private Item CreateWorldItem(ItemSO itemSo)
     {
-      return Instantiate(itemSo.prefab);
+      return Instantiate(itemSo.prefab).Setup(_heroInventory);
     }
   }
 }

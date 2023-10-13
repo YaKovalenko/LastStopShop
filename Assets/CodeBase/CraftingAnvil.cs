@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CodeBase.Hero;
 using CodeBase.Tables;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ namespace CodeBase
     [SerializeField] private Transform itemSpawnPoint;
     [SerializeField] private Transform vfxSpawn;
     [SerializeField] private CraftTable _craftTable;
+    [SerializeField] private HeroInventory _heroInventory;
 
     private CraftingRecipeSO craftingRecipeSo;
 
@@ -38,14 +40,14 @@ namespace CodeBase
       recipeImage.sprite = craftingRecipeSo.sprite;
     }
 
-    public void Craft()
+    public bool Craft()
     {
       Debug.Log("Craft");
-      Collider[] colliderArray = Physics.OverlapBox(transform.position + placeItemsAreaBoxCollider.center,
-        placeItemsAreaBoxCollider.size, placeItemsAreaBoxCollider.transform.rotation);
-
-      List<ItemSO> inputItemList = new List<ItemSO>(craftingRecipeSo.inputItemSOList);
-      List<GameObject> consumeItemGameObjectsList = new List<GameObject>();
+      // Collider[] colliderArray = Physics.OverlapBox(transform.position + placeItemsAreaBoxCollider.center,
+      //   placeItemsAreaBoxCollider.size, placeItemsAreaBoxCollider.transform.rotation);
+      //
+      // List<ItemSO> inputItemList = new List<ItemSO>(craftingRecipeSo.inputItemSOList);
+      // List<GameObject> consumeItemGameObjectsList = new List<GameObject>();
 
       List<int> foundItemFromRecipies = new List<int>();
 
@@ -65,36 +67,51 @@ namespace CodeBase
       {
         Debug.Log("Item will be crafted " + craftingRecipeSo.outputItemSO.name);
       }
+
+      for (int i = 0; i < foundItemFromRecipies.Count; i++)
+      {
+        _craftTable.ClearTableSlot(foundItemFromRecipies[i]);
+      }
       
-      foreach (Collider collider in colliderArray)
+      var coffin = Instantiate(craftingRecipeSo.outputItemSO.prefab, itemSpawnPoint.position, itemSpawnPoint.rotation, itemSpawnPoint.transform);
+
+      if (_heroInventory.IsCoffinInHand == false)
       {
-        Debug.Log(collider);
-        if (collider.TryGetComponent(out Item itemSoHolder))
-        {
-          if (inputItemList.Contains(itemSoHolder.ItemSo))
-          {
-            inputItemList.Remove(itemSoHolder.ItemSo);
-            consumeItemGameObjectsList.Add(collider.gameObject);
-          }
-        }
+        _heroInventory.PutCoffinInInventory(coffin);
+        return true;
       }
 
-      if (inputItemList.Count == 0)
-      {
-        Debug.Log("Yes");
-        Instantiate(craftingRecipeSo.outputItemSO.prefab, itemSpawnPoint.position, itemSpawnPoint.rotation);
-        
-        Instantiate(vfxSpawn, itemSpawnPoint.position, itemSpawnPoint.rotation);
+      return false;
+      //
+      // foreach (Collider collider in colliderArray)
+      // {
+      //   Debug.Log(collider);
+      //   if (collider.TryGetComponent(out Item itemSoHolder))
+      //   {
+      //     if (inputItemList.Contains(itemSoHolder.ItemSo))
+      //     {
+      //       inputItemList.Remove(itemSoHolder.ItemSo);
+      //       consumeItemGameObjectsList.Add(collider.gameObject);
+      //     }
+      //   }
+      // }
 
-        foreach (GameObject consumeItemGameObject in consumeItemGameObjectsList)
-        {
-          Destroy(consumeItemGameObject);
-        }
-      }
-      else
-      {
-        Debug.Log("No");
-      }
+      // if (inputItemList.Count == 0)
+      // {
+      //   Debug.Log("Yes");
+      //   Instantiate(craftingRecipeSo.outputItemSO.prefab, itemSpawnPoint.position, itemSpawnPoint.rotation);
+      //   
+      //   Instantiate(vfxSpawn, itemSpawnPoint.position, itemSpawnPoint.rotation);
+      //
+      //   foreach (GameObject consumeItemGameObject in consumeItemGameObjectsList)
+      //   {
+      //     Destroy(consumeItemGameObject);
+      //   }
+      // }
+      // else
+      // {
+      //   Debug.Log("No");
+      // }
     }
   }
 }

@@ -8,11 +8,21 @@ namespace CodeBase.MiniGame
   {
     [SerializeField] private GameObject _canvas;
 
+    private void Awake()
+    {
+      EventManager.MiniGameEnded += CloseMiniGameWindow;
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
       Debug.Log("Click");
       _canvas.SetActive(true);
 
+    }
+
+    private void CloseMiniGameWindow()
+    {
+      _canvas.SetActive(false);
     }
   }
 }
