@@ -2128,6 +2128,26 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3652322726872927854, guid: 2c000a9b7ff141e41bb63d18bff237ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652322726872927854, guid: 2c000a9b7ff141e41bb63d18bff237ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652322726872927854, guid: 2c000a9b7ff141e41bb63d18bff237ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652322726872927854, guid: 2c000a9b7ff141e41bb63d18bff237ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652322726872927854, guid: 2c000a9b7ff141e41bb63d18bff237ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
     - target: {fileID: 3702228930432037849, guid: 2c000a9b7ff141e41bb63d18bff237ee, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -2188,6 +2208,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7477273876573787601, guid: 2c000a9b7ff141e41bb63d18bff237ee, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2312d37b4d605544a794d645888fe15, type: 2}
     - target: {fileID: 8876351738505749438, guid: 2c000a9b7ff141e41bb63d18bff237ee, type: 3}
       propertyPath: m_Name
       value: 'walls '
@@ -3681,7 +3705,8 @@ PrefabInstance:
     - {fileID: 5008421845777911395, guid: ac905b35dccf01d428478ceabdd56c1e, type: 3}
     - {fileID: 2086919567708698851, guid: ac905b35dccf01d428478ceabdd56c1e, type: 3}
     - {fileID: 7440457291821094372, guid: ac905b35dccf01d428478ceabdd56c1e, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5429928283720011173, guid: ac905b35dccf01d428478ceabdd56c1e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3767313537102065198, guid: ac905b35dccf01d428478ceabdd56c1e, type: 3}
       insertIndex: -1
