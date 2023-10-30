@@ -43,11 +43,6 @@ namespace CodeBase
     public bool Craft()
     {
       Debug.Log("Craft");
-      // Collider[] colliderArray = Physics.OverlapBox(transform.position + placeItemsAreaBoxCollider.center,
-      //   placeItemsAreaBoxCollider.size, placeItemsAreaBoxCollider.transform.rotation);
-      //
-      // List<ItemSO> inputItemList = new List<ItemSO>(craftingRecipeSo.inputItemSOList);
-      // List<GameObject> consumeItemGameObjectsList = new List<GameObject>();
 
       List<int> foundItemFromRecipies = new List<int>();
 
@@ -78,40 +73,11 @@ namespace CodeBase
       if (_heroInventory.IsCoffinInHand == false)
       {
         _heroInventory.PutCoffinInInventory(coffin);
+        Instantiate(vfxSpawn, itemSpawnPoint.position, itemSpawnPoint.rotation);
         return true;
       }
 
       return false;
-      //
-      // foreach (Collider collider in colliderArray)
-      // {
-      //   Debug.Log(collider);
-      //   if (collider.TryGetComponent(out Item itemSoHolder))
-      //   {
-      //     if (inputItemList.Contains(itemSoHolder.ItemSo))
-      //     {
-      //       inputItemList.Remove(itemSoHolder.ItemSo);
-      //       consumeItemGameObjectsList.Add(collider.gameObject);
-      //     }
-      //   }
-      // }
-
-      // if (inputItemList.Count == 0)
-      // {
-      //   Debug.Log("Yes");
-      //   Instantiate(craftingRecipeSo.outputItemSO.prefab, itemSpawnPoint.position, itemSpawnPoint.rotation);
-      //   
-      //   Instantiate(vfxSpawn, itemSpawnPoint.position, itemSpawnPoint.rotation);
-      //
-      //   foreach (GameObject consumeItemGameObject in consumeItemGameObjectsList)
-      //   {
-      //     Destroy(consumeItemGameObject);
-      //   }
-      // }
-      // else
-      // {
-      //   Debug.Log("No");
-      // }
     }
   }
 }

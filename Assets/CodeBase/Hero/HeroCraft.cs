@@ -15,11 +15,12 @@ namespace CodeBase.Hero
     {
       if (other.CompareTag("CraftingTable"))
       {
+        Debug.Log("Inside crafting table");
         if (Input.GetKeyDown(KeyCode.N))
         {
           _craftingAnvil.NextRecipe();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
           _craftTable.TakeItemFromPlayer();
         }
@@ -32,24 +33,5 @@ namespace CodeBase.Hero
         }
       }
     }
-
-    // private void Update()
-    // {
-    //   if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, interactDistance))
-    //   {
-    //     if (raycastHit.transform.TryGetComponent(out CraftingAnvil craftingAnvil))
-    //     {
-    //       if (Input.GetKeyDown(KeyCode.C))
-    //       {
-    //         craftingAnvil.NextRecipe();
-    //       }
-    //
-    //       if (Input.GetMouseButtonDown(0))
-    //       {
-    //         craftingAnvil.Craft();
-    //       }
-    //     }
-    //   }
-    //}
   }
 }
