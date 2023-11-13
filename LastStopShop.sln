@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Demo.Editor"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinoBloom.Runtime", "KinoBloom.Runtime.csproj", "{a3438c81-70cb-2789-1133-044801e680de}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{35f84a8d-fdad-edf9-76f1-c92551367762}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,8 +46,6 @@ Global
 		{c7550dd9-50f8-45b7-bd86-1d6a9ddca07d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{a3438c81-70cb-2789-1133-044801e680de}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{a3438c81-70cb-2789-1133-044801e680de}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35f84a8d-fdad-edf9-76f1-c92551367762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35f84a8d-fdad-edf9-76f1-c92551367762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
