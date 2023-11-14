@@ -6558,7 +6558,7 @@ Transform:
   m_GameObject: {fileID: 193177326}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.5092, y: 1.137, z: -2.436}
+  m_LocalPosition: {x: -2.328, y: 1.363, z: -2.154}
   m_LocalScale: {x: 2.4045873, y: 2.4045873, z: 2.4045873}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11874,7 +11874,7 @@ Transform:
   m_GameObject: {fileID: 282219485}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.464, y: 1.223, z: -2.436}
+  m_LocalPosition: {x: -2.373, y: 1.449, z: -2.154}
   m_LocalScale: {x: 2.173933, y: 2.173933, z: 2.173933}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28724,7 +28724,7 @@ Transform:
   m_GameObject: {fileID: 468661653}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.3332, y: 1.223, z: -2.436}
+  m_LocalPosition: {x: -2.504, y: 1.449, z: -2.154}
   m_LocalScale: {x: 2.173933, y: 2.173933, z: 2.173933}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48876,7 +48876,7 @@ Transform:
   m_GameObject: {fileID: 1191288689}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.614, y: 1.148, z: -2.436}
+  m_LocalPosition: {x: -2.223, y: 1.374, z: -2.154}
   m_LocalScale: {x: 2.173933, y: 2.173933, z: 2.173933}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68428,6 +68428,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38da931eccfe4a44591d9dd9f5bfa862, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2138683062}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38da931eccfe4a44591d9dd9f5bfa862, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2138683069}
   m_SourcePrefab: {fileID: 100100000, guid: 38da931eccfe4a44591d9dd9f5bfa862, type: 3}
 --- !u!4 &1658271779 stripped
 Transform:
@@ -91504,6 +91507,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!95 &2138683069
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138683060}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21ffd868c800c1a4ba87a43a8d493ff6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2139964249
 GameObject:
   m_ObjectHideFlags: 0
