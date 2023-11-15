@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 4461898769571349820}
   - component: {fileID: 8972396258680428302}
   - component: {fileID: 7310044903298966252}
+  - component: {fileID: 321029157883452503}
+  - component: {fileID: 8609729931726320796}
   m_Layer: 0
-  m_Name: polySurface6
+  m_Name: Pink Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819932987300428942}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.031106168, y: 0.70993096, z: 0.014386318}
-  m_LocalScale: {x: 2.60409, y: 2.60409, z: 4.1758566}
+  m_LocalScale: {x: 16.42512, y: 16.42512, z: 16.42512}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +85,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &321029157883452503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819932987300428942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a54c5873ba49469b1ebd4429a7abe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemSo: {fileID: 11400000, guid: 75a5d6f83e223d046bef6ec625d21b9f, type: 2}
+  _heroInventory: {fileID: 0}
+--- !u!65 &8609729931726320796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819932987300428942}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00679167, y: 0.00817871, z: 0.001597976}
+  m_Center: {x: 0.00010925414, y: -0.00010143266, z: -0.003143716}

@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 6750181655491074423}
   - component: {fileID: 4637933730236361887}
   - component: {fileID: 1486900717285562193}
+  - component: {fileID: 3593842885644298173}
+  - component: {fileID: -6038086573010321023}
   m_Layer: 0
-  m_Name: collar1
+  m_Name: Pink Collar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8368408404308787618}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05146082, y: 0.75462085, z: 0.00080902944}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: -0.051461, y: 0.75462, z: 0.00061494}
+  m_LocalScale: {x: 7.9841495, y: 7.9841495, z: 7.9841495}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!33 &4637933730236361887
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -83,3 +85,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3593842885644298173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368408404308787618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a54c5873ba49469b1ebd4429a7abe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemSo: {fileID: 11400000, guid: 40c6fdfccd500b242a0436005f24bfc2, type: 2}
+  _heroInventory: {fileID: 0}
+--- !u!65 &-6038086573010321023
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368408404308787618}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.03080075, y: 0.0065557864, z: 0.019888207}
+  m_Center: {x: 0, y: -0.00000000896398, z: -0.000049774535}
