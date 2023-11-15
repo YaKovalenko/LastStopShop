@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using CodeBase.CameraLogic;
 using CodeBase.Infrastructure;
 using CodeBase.Services.Input;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace CodeBase.Hero
 {
@@ -10,6 +13,9 @@ namespace CodeBase.Hero
   {
     private Camera _camera;
     private IInputService _inputService;
+    private static PointerEventData _eventDataCurrentPosition;
+    private static List<RaycastResult> _results;
+    [SerializeField] private Animator _animator;
 
     void Awake()
     {
@@ -35,10 +41,12 @@ namespace CodeBase.Hero
 
       if (playerNavMeshAgent.remainingDistance <= playerNavMeshAgent.stoppingDistance)
       {
+        _animator.SetFloat("Speed", 0);
         isRunning = false;
       }
       else
       {
+        _animator.SetFloat("Speed", 1);
         isRunning = true;
       }
     }
@@ -47,6 +55,14 @@ namespace CodeBase.Hero
     {
       _camera = Camera.main;
       CameraFollow();
+    }
+    
+    public static bool IsOverUI()
+    {
+      _eventDataCurrentPosition = new PointerEventData(EventSystem.current){position = Mouse.current.position.ReadValue()};
+      _results = new List<RaycastResult>();
+      EventSystem.current.RaycastAll(_eventDataCurrentPosition, _results);
+      return _results.Count > 0;
     }
 
     private void CameraFollow() =>
