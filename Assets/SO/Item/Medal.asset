@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7fc177fbe47f89715a9ed057c6a8a, type: 3}
   m_Name: Medal
   m_EditorClassIdentifier: 
-  name: 
+  name: Medal
   prefab: {fileID: 0}

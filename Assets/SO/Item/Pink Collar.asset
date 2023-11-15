@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7fc177fbe47f89715a9ed057c6a8a, type: 3}
   m_Name: Pink Collar
   m_EditorClassIdentifier: 
-  name: 
-  prefab: {fileID: 0}
+  name: Pink Collar
+  prefab: {fileID: 3593842885644298173, guid: 9dbf176e5351cee478c59da9c3485cda, type: 3}

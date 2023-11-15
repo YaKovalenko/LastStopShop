@@ -9,6 +9,7 @@ namespace CodeBase.Customer
     {
         [SerializeField] private Transform vfxSpawn;
         [SerializeField] private Transform spawnPoint;
+        [SerializeField] private GameObject _stuff;
 
         private void Start()
         {
@@ -17,10 +18,10 @@ namespace CodeBase.Customer
 
         private void OnSpawnWinVFX()
         {
+            _stuff.SetActive(true);
             Instantiate(vfxSpawn, spawnPoint.position, spawnPoint.rotation);
             StartCoroutine(DestroyDelay());
-            
-            }
+        }
 
         private IEnumerator DestroyDelay()
         {

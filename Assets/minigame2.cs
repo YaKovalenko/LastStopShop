@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class minigame : MonoBehaviour
+public class minigame2 : MonoBehaviour
 {   
     public GameObject PanelMiniGame;
     

@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using CodeBase.Loot;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace CodeBase.MiniGame
@@ -26,33 +29,20 @@ namespace CodeBase.MiniGame
             }
         
         }
-        public bool k = false;
-        public string Name = "";
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerStay(Collider other)
         {
-            k = true;
-            Name = other.name;
+            Debug.Log("Colliders");
             _lastClickedItem = other.GetComponent<MiniGameLootItem>();
         }
 
-        private void OnTriggerExit2D(Collider2D other)
+        public void LootSender()
         {
-            k = false;
-            Name = "";
+            Debug.Log("Ebanaya knopka click");
+            if(_lastClickedItem != null)
+                SendLoot();
         }
 
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.E) && k == true)
-            {
-                speed = 0;
-                Debug.Log(Name);
-                if(_lastClickedItem != null)
-                    SendLoot();
-
-            }
-        }
 
         private void SendLoot()
         {

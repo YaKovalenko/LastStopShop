@@ -11,14 +11,6 @@ namespace CodeBase.Loot
     [SerializeField] private LootTableManager _lootTableManager;
     private ItemSO _newLoot;
 
-    private void Awake()
-    {
-      
-    }
-
-    //For debug only
-    [SerializeField] private ItemSO _debugItem;
-
     public void AddLoot(List<ItemSO> newLoot)
     {
       
@@ -35,12 +27,6 @@ namespace CodeBase.Loot
       _lastLoot.Add(newLoot);
 
       _lootTableManager.SpawnNewLoot(_lastLoot);
-    }
-
-    [ContextMenu("AddItem")]
-    public void DebugAddLoot()
-    {
-      AddLoot(_debugItem);
     }
   }
 }
