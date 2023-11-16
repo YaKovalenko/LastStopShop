@@ -58,6 +58,8 @@ namespace CodeBase
         }
       }
 
+      Instantiate(vfxSpawn, itemSpawnPoint.position, itemSpawnPoint.rotation);
+      new WaitForSeconds(4);
       if (foundItemFromRecipies.Count == craftingRecipeSo.inputItemSOList.Count)
       {
         Debug.Log("Item will be crafted " + craftingRecipeSo.outputItemSO.name);
@@ -67,13 +69,12 @@ namespace CodeBase
       {
         _craftTable.ClearTableSlot(foundItemFromRecipies[i]);
       }
-      
       var coffin = Instantiate(craftingRecipeSo.outputItemSO.prefab, itemSpawnPoint.position, itemSpawnPoint.rotation, itemSpawnPoint.transform);
 
       if (_heroInventory.IsCoffinInHand == false)
       {
+        
         _heroInventory.PutCoffinInInventory(coffin);
-        Instantiate(vfxSpawn, itemSpawnPoint.position, itemSpawnPoint.rotation);
         return true;
       }
 

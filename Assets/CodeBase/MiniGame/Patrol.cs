@@ -30,17 +30,18 @@ namespace CodeBase.MiniGame
         
         }
 
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerStay2D(Collider2D other)
         {
-            Debug.Log("Colliders");
+           
             _lastClickedItem = other.GetComponent<MiniGameLootItem>();
         }
 
         public void LootSender()
         {
-            Debug.Log("Ebanaya knopka click");
-            if(_lastClickedItem != null)
+            if (_lastClickedItem != null)
+            {
                 SendLoot();
+            }
         }
 
 
