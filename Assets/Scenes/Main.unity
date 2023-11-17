@@ -19613,6 +19613,10 @@ PrefabInstance:
       propertyPath: _heroInventory
       value: 
       objectReference: {fileID: 2138683064}
+    - target: {fileID: 5982356285190855357, guid: dd50e694e526f0342a98264846ca90b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6580483999512328951, guid: dd50e694e526f0342a98264846ca90b5, type: 3}
       propertyPath: m_Name
       value: Ghost_customers_lo4
