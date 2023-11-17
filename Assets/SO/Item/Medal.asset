@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Medal
   m_EditorClassIdentifier: 
   name: Medal
-  prefab: {fileID: 0}
+  prefab: {fileID: 1406607586614741939, guid: 2f704cde5335a8d4996b551dd54a81a6, type: 3}

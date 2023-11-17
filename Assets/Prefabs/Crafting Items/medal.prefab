@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemSo: {fileID: 11400000, guid: b091f7c42e4dc61419675aeac425d039, type: 2}
-  _heroInventory: {fileID: 0}
+  _heroInventory: {fileID: 8070556287177605829, guid: 4e1406bd518d8844f8f29e628dd1e371, type: 3}
 --- !u!65 &2233503526600156114
 BoxCollider:
   m_ObjectHideFlags: 0

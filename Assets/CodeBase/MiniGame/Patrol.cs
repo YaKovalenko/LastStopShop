@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CodeBase.Infrastructure;
 using CodeBase.Loot;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -17,6 +18,7 @@ namespace CodeBase.MiniGame
 
         [SerializeField] private MiniGameLootItem _lastClickedItem;
         [SerializeField] private LootManager _lootManager;
+        [SerializeField] private GameObject _cursor;
 
         private void FixedUpdate()
         {
@@ -48,7 +50,9 @@ namespace CodeBase.MiniGame
         private void SendLoot()
         {
             _lootManager.AddLoot(_lastClickedItem.GetItemData());
-            EventManager.OnMiniGameEnded();
+            speed = 0;
+            _cursor.SetActive(false);
+            //EventManager.OnMiniGameEnded();
         }
     }
 }

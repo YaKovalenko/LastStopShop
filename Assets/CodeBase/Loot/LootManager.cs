@@ -13,7 +13,7 @@ namespace CodeBase.Loot
 
     public void AddLoot(List<ItemSO> newLoot)
     {
-      
+
     }
     
     
