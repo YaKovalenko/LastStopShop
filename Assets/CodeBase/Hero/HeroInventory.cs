@@ -29,10 +29,13 @@ namespace CodeBase.Hero
     
     public void PutInInventory(Item itemToPut)
     {
-      _itemInHand = itemToPut;
-      IsItemInHand = true;
-      _itemInHand.transform.parent = _handPosition;
-      _itemInHand.transform.localPosition = Vector3.zero;
+      if (IsItemInHand == false)
+      {
+        _itemInHand = itemToPut;
+        IsItemInHand = true;
+        _itemInHand.transform.parent = _handPosition;
+        _itemInHand.transform.localPosition = Vector3.zero;
+      }
     }
 
     public Item RemoveFromInventory()

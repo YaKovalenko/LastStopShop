@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731329193ef6488fb69baa2aecb4eb3f, type: 3}
+  m_Name: Yellow Collar Recipe
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 87fa00ffdd53d1a4d9b91eee39d89ac5, type: 3}
+  inputItemSOList:
+  - {fileID: 11400000, guid: b091f7c42e4dc61419675aeac425d039, type: 2}
+  - {fileID: 11400000, guid: e946a7d1b135b0148b921c5e4e8f4db5, type: 2}
+  outputItemSO: {fileID: 11400000, guid: eb27cd4ffdb0a23408294e1adb92c04c, type: 2}

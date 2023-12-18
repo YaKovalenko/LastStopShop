@@ -11,7 +11,7 @@ namespace CodeBase
         public string[] sentences;
         private int index;
         public float typingSpeed;
-        public bool playerIsClose = true;
+        public bool playerIsClose;
 
         private void Update()
         {
@@ -27,7 +27,7 @@ namespace CodeBase
                     StartCoroutine(Type());
                 }
             }
-            else if(Input.GetMouseButtonDown(0) && playerIsClose)
+            else if(Input.GetKeyDown(KeyCode.RightArrow) && playerIsClose)
             {
                 NextSentence();
             }
@@ -77,6 +77,7 @@ namespace CodeBase
             else
             {
                 textDisplay.text = "";
+                dialogPanel.SetActive(false);
             }
         }
     }

@@ -17,6 +17,7 @@ namespace CodeBase.MiniGame
         public int i;
 
         [SerializeField] private MiniGameLootItem _lastClickedItem;
+        [SerializeField] private List<ItemSO> _lastClickedItems;
         [SerializeField] private LootManager _lootManager;
         [SerializeField] private GameObject _cursor;
 
@@ -32,16 +33,23 @@ namespace CodeBase.MiniGame
         
         }
 
-        private void OnTriggerStay2D(Collider2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
            
             _lastClickedItem = other.GetComponent<MiniGameLootItem>();
+        }
+        
+        private void OnTriggerExit2D(Collider2D other)
+        {
+           
+            _lastClickedItem = null;
         }
 
         public void LootSender()
         {
             if (_lastClickedItem != null)
             {
+                _lastClickedItems.Add(_lastClickedItem.GetItemData());
                 SendLoot();
             }
         }
@@ -49,7 +57,7 @@ namespace CodeBase.MiniGame
 
         private void SendLoot()
         {
-            _lootManager.AddLoot(_lastClickedItem.GetItemData());
+            _lootManager.AddLoot(_lastClickedItems);
             speed = 0;
             _cursor.SetActive(false);
             //EventManager.OnMiniGameEnded();

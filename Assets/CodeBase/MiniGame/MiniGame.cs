@@ -1,13 +1,15 @@
 using System;
+using CodeBase.Hero;
+using CodeBase.States;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace CodeBase.MiniGame
 {
-  public class MiniGame : MonoBehaviour, IPointerClickHandler
+  public class MiniGame : MonoBehaviour, IPointerClickHandler 
   {
     [SerializeField] private GameObject _canvas;
-
+    
     private void Awake()
     {
       EventManager.MiniGameEnded += CloseMiniGameWindow;
@@ -17,7 +19,7 @@ namespace CodeBase.MiniGame
     {
       Debug.Log("Click");
       _canvas.SetActive(true);
-
+      EventManager.OnMiniGameStart();
     }
 
     private void CloseMiniGameWindow()

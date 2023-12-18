@@ -13,7 +13,17 @@ namespace CodeBase.Loot
 
     public void AddLoot(List<ItemSO> newLoot)
     {
+      if (_lastLoot == null)
+      {
+        _lastLoot = new List<ItemSO>();
+      }
 
+      foreach (var loot in newLoot)
+      {
+        _lastLoot.Add(loot);
+
+        _lootTableManager.SpawnNewLoot(_lastLoot);
+      }
     }
     
     

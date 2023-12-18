@@ -11688,9 +11688,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '....
-
-'
+  m_text: This collar was a gift from my father, on the last day we spent together
+    before I died in an accident.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4b3b93b0ad451043b5d4f2019f7c81d, type: 2}
   m_sharedMaterial: {fileID: 7803876352064419428, guid: c4b3b93b0ad451043b5d4f2019f7c81d, type: 2}
@@ -11717,15 +11716,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50.35
+  m_fontSizeBase: 50.35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11753,7 +11752,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -559.0198, y: -71.82266, z: -574.5261, w: -104.50981}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -17977,7 +17976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819932987300428942, guid: 6c29264e5eec84445a8b0f49bf302092, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4461898769571349820, guid: 6c29264e5eec84445a8b0f49bf302092, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18682,7 +18681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5304335797980872691, guid: 2f704cde5335a8d4996b551dd54a81a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.392
+      value: 3.699
       objectReference: {fileID: 0}
     - target: {fileID: 5304335797980872691, guid: 2f704cde5335a8d4996b551dd54a81a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20821,6 +20820,10 @@ PrefabInstance:
       propertyPath: _craftingAnvil
       value: 
       objectReference: {fileID: 7188447252090491753}
+    - target: {fileID: 8070556287177605829, guid: 4e1406bd518d8844f8f29e628dd1e371, type: 3}
+      propertyPath: _itemInHand
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

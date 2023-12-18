@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
 using CodeBase.CameraLogic;
 using CodeBase.Infrastructure;
+using CodeBase.MiniGame;
 using CodeBase.Services.Input;
+using CodeBase.States;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -16,10 +19,29 @@ namespace CodeBase.Hero
     private static PointerEventData _eventDataCurrentPosition;
     private static List<RaycastResult> _results;
     [SerializeField] private Animator _animator;
-
+    
     void Awake()
     {
-      _inputService = Game.InputService;
+      GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+      EventManager.MiniGameStart += OnMiniGameStart;
+      EventManager.MiniGameEnded += OnMiniGameEnded;
+    }
+
+    private void OnMiniGameEnded()
+    {
+      playerNavMeshAgent.speed = 0.5f;
+      }
+
+    private void OnMiniGameStart()
+    {
+      playerNavMeshAgent.speed = 0;
+    }
+
+    private void OnDestroy()
+    {
+      GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+      EventManager.MiniGameStart -= OnMiniGameStart;
+      EventManager.MiniGameEnded -= OnMiniGameEnded;
     }
 
     public NavMeshAgent playerNavMeshAgent;
@@ -49,6 +71,11 @@ namespace CodeBase.Hero
         _animator.SetFloat("Speed", 1);
         isRunning = true;
       }
+    }
+
+    private void OnGameStateChanged(GameState newGameState)
+    {
+      enabled = newGameState == GameState.Gameplay;
     }
 
     private void Start()

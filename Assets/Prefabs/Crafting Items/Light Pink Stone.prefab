@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1347446788692203838}
   - component: {fileID: 976222844461245890}
   - component: {fileID: -1877654383550324712}
+  - component: {fileID: 4852067777300734384}
   m_Layer: 0
   m_Name: Light Pink Stone
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3919418653716375814}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.051126808, y: 0.7092026, z: 0.0012586057}
-  m_LocalScale: {x: 2.2483783, y: 2.2483783, z: 3.6054456}
+  m_LocalPosition: {x: -0.051126808, y: 0.7092026, z: 0.0012586}
+  m_LocalScale: {x: 16, y: 16, z: 16}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,5 +97,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a54c5873ba49469b1ebd4429a7abe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemSo: {fileID: 0}
+  ItemSo: {fileID: 11400000, guid: e946a7d1b135b0148b921c5e4e8f4db5, type: 2}
   _heroInventory: {fileID: 0}
+--- !u!65 &4852067777300734384
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919418653716375814}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0064460346, y: 0.0093769, z: 0.0015979742}
+  m_Center: {x: 0, y: 0, z: 0}

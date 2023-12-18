@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CodeBase.Hero;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,7 +12,9 @@ namespace CodeBase
     [SerializeField] private List<ItemSO> _coffins;
     [SerializeField] private ItemSO _selectedCoffin;
     [SerializeField] private HeroInventory _heroInventory;
+    
     public static event Action PlayerWon;
+    public static event Action PlayerLose;
 
     private void Start()
     {
@@ -47,12 +50,19 @@ namespace CodeBase
       else
       {
         Debug.Log("Bad coffin");
+        OnPlayerLose();
+        Destroy(coffin.gameObject);
       }
     }
     
     public static void OnPlayerWon()
     {
       PlayerWon?.Invoke();
+    }
+    
+    public static void OnPlayerLose()
+    {
+      PlayerLose?.Invoke();
     }
 
     public void RollSelectedCoffin()

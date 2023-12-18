@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using CodeBase.MiniGame;
 using UnityEngine;
 
 public class minigame2 : MonoBehaviour
@@ -37,6 +38,7 @@ public class minigame2 : MonoBehaviour
         PanelMiniGame.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        EventManager.OnMiniGameEnded();
     }
     private void PauseGame()
     {

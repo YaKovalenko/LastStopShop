@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9195460522874090838}
   - component: {fileID: 4570299357190589987}
   - component: {fileID: 4782050611823538804}
+  - component: {fileID: 229828603933853404}
   m_Layer: 0
   m_Name: Blue Stone
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 5850817652683395631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.070303775, y: 0.7093865, z: 0.0020927167}
-  m_LocalScale: {x: 0.7157708, y: 1.0499262, z: 0.7442226}
+  m_LocalPosition: {x: -0.070303775, y: 0.7093865, z: 0.0021574}
+  m_LocalScale: {x: 16, y: 16, z: 16}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,5 +97,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a54c5873ba49469b1ebd4429a7abe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemSo: {fileID: 0}
+  ItemSo: {fileID: 11400000, guid: 20caf577c7bbc7f45b92147a556c5a0a, type: 2}
   _heroInventory: {fileID: 0}
+--- !u!65 &229828603933853404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5850817652683395631}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019019222, y: 0.01901924, z: 0.0049677417}
+  m_Center: {x: 0.0000000018626451, y: -0.000000027939677, z: -0.000018484425}
